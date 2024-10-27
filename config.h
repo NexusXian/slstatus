@@ -66,7 +66,7 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
         { ram_perc, "[RAM %s%] ", NULL },
         { cpu_perc, "[CPU %s%] ", NULL },
-        { load_avg, "[LOAD %s] ", NULL },
+        { disk_free,    "Disk %s",     "/" },
         { temp, "[TEMP %sC] ", "/sys/class/thermal/thermal_zone0/temp" },
         { battery_perc, "[BAT %s%] ", "BAT0" },
         { datetime, "%s",           "%F %T" },
