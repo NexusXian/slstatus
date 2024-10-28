@@ -64,10 +64,11 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 static const struct arg args[] = {
-        { ram_perc, "[RAM %s%] ", NULL },
-        { cpu_perc, "[CPU %s%] ", NULL },
-        { disk_free,    "Disk %s",     "/" },
-        { temp, "[TEMP %sC] ", "/sys/class/thermal/thermal_zone0/temp" },
-        { battery_perc, "[BAT %s%] ", "BAT0" },
+        {run_command, "󰣇  %s | ","uname -r | awk -F'-' '{print $1}'"},
+        { ram_perc, " %s% | ", NULL },
+        { cpu_perc, "   %s% | ", NULL },
+        { disk_free,    "󰗮 %s | ",     "/" },
+        { temp, "  %sC | ", "/sys/class/thermal/thermal_zone0/temp" },
+        { battery_perc, "󰁹 %s%| ", "BAT0" },
         { datetime, "%s",           "%F %T" },
 };
